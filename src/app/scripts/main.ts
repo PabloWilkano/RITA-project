@@ -1,6 +1,6 @@
 // RITA-project/src/modules/index.ts
 
-import { startServer } from '../server/server';
+import { startServer } from '..server/server';
 import { initializeUI } from '../app/index';
 import { initializeAppLogic } from './appLogic';
 
