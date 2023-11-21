@@ -1,43 +1,79 @@
 // voiceToText.ts
 
+import * as DeepSpeech from 'deepspeech';
+
 class VoiceToText {
-    constructor() {
-      this.recognition = new webkitSpeechRecognition();
-      this.recognition.continuous = false;
-      this.recognition.lang = 'en-US';
-      this.recognition.interimResults = false;
-  
-      // Event listeners
-      this.recognition.onresult = (event) => {
-        const result = event.results[0][0].transcript;
-        this.onTextCaptured(result);
-      };
-  
-      this.recognition.onerror = (event) => {
-        this.onError(event.error);
-      };
+  private model: DeepSpeech.Model;
+  private stream: DeepSpeech.Stream;
+  private audioInputStream: AudioInputStream;
+
+ cdfasdftch (error) {
+  // log or handle errors
+}{}
+const audioStream = new AudioInputStream();
+  /**
+   * Start voice capture
+   */
+  async startCapture() {
+    // Start audio input stream
+    const text = await this.deepspeechStream.finishStream();
+
+    // Feed audio to DeepSpeech
+    this.audioInputStream.on("data", (chunk) => {
+      this.deepspeechStream.feedAudioContent(chunk);
+    });
+  }
+
+  // Stop capturing voice input
+  stopCapture() {
+    // Finish DeepSpeech stream
+    const text = this.deepspeechStream.finishStream();
+    if(!text) {
+      // handle invalid text
     }
-  
-    // Start capturing voice input
-    startCapture() {
-      this.recognition.start();
-    }
-  
-    // Stop capturing voice input
-    stopCapture() {
-      this.recognition.stop();
-    }
-  
-    // Callback for when text is captured
-    onTextCaptured(text) {
-      // Handle the captured text, e.g., send it for processing
-      console.log('Captured Text:', text);
-    }
-  
-    // Callback for handling errors
-    onError(error) {
-      console.error('Voice Recognition Error:', error);
+    this.onTextCaptured(text);
+
+    // Stop audio input stream
+    this.audioInputStream.stop();
+  }
+
+  // Callback for when text is captured
+  onTextCaptured(text: string): void {
+    // Handle captured text
+    console.log("Captured Text:", text);
+  }
+}import * as DeepSpeech from 'deepspeech';
+
+class VoiceToText {
+  private model: DeepSpeech.Model;
+  private stream: DeepSpeech.Stream;
+  private audioInputStream: AudioInputStream;
+
+  constructor() {
+    this.model = new DeepSpeech.Model("./deepspeech-model");
+    this.stream = this.model.createStream();
+    this.audioInputStream = new AudioInputStream();
+  }
+
+  public captureText(callback: (text: string) => void): void {
+    try {
+      // Code to capture audio stream
+      const audioStream = this.audioInputStream.captureAudioStream();
+
+      // Code to process audio stream using DeepSpeech
+      const buffer = audioStream.getBuffer();
+      this.stream.feedAudioContent(buffer);
+      const text = this.stream.intermediateDecode();
+
+      // Callback with captured text
+      callback(text);
+    } catch (error) {
+      // Error handling
+      console.error("Error capturing text:", error);
+      callback("");
     }
   }
-  
-  export default VoiceToText;
+}
+
+
+export default VoiceToText;
