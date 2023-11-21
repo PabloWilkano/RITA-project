@@ -1,0 +1,32 @@
+{
+  "name": "RITA - The Restaurant Inventory Taking Application",
+  "version": "1.0.0",
+  "description": "Restaurant Inventory Taking Application (RITA)",
+  "main": "src/modules/index.ts",
+  "scripts": {
+    "start": "node ./dist/index.js",   // Adjust the path to your compiled server file
+    "dev": "ts-node src/modules/index.ts", // For development using TypeScript
+    "test": "jest", // Add testing scripts here
+    "build": "tsc", // For compiling TypeScript to JavaScript
+    "lint": "eslint .", // Add linting scripts here
+    "prestart": "npm run build", // Build before starting in production
+    "pretest": "npm run lint" // Run linting before testing
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rita-project.git" // Update with your repository URL
+  },
+  "keywords": ["restaurant", "inventory", "management", "RITA"],
+  "author": "Your Name",
+  "license": "MIT", // Choose an appropriate license
+  "dependencies": {
+    // Add your production dependencies here
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2", // For TypeScript Jest support
+    "eslint": "^7.32.0", // For linting
+    "jest": "^27.2.3", // Testing framework
+    "ts-node": "^10.4.0", // For running TypeScript in development
+    "typescript": "^4.4.3", // TypeScript compiler
+  }
+}
