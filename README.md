@@ -86,30 +86,17 @@ Follow the user-friendly interface to perform inventory management tasks, genera
 
 ## License
 
-No Copyright
+**RITA is proprietary software**, and all rights to the source code, design, and associated assets are reserved. By accessing, using, or obtaining a copy of this software, you acknowledge and agree to the following terms and conditions:
 
-The person who associated a work with this deed has dedicated the work to the
-public domain by waiving all of his or her rights to the work worldwide under
-copyright law, including all related and neighboring rights,
-to the extent allowed by law.
+- You may not redistribute or sublicense the software or any of its components in any form, whether modified or unmodified.
+- You may not modify, adapt, or reverse engineer the software, or create derivative works based on it.
+- You may not use this software for commercial purposes without obtaining explicit written permission from the owner, Compass Tech.
+- Any unauthorized use, reproduction, or distribution of this software is strictly prohibited and may result in legal action.
 
-You can copy, modify, distribute and perform the work, even for commercial
-purposes, all without asking permission. See Other Information below.
+For inquiries, permissions, or licensing requests, please contact:
 
-Other Information:
-
-    * In no way are the patent or trademark rights of any person affected
-    by CC0, nor are the rights that other persons may have in the work or in
-    how the work is used, such as publicity or privacy rights.
-
-    * Unless expressly stated otherwise, the person who associated a work with
-    this deed makes no warranties about the work, and disclaims liability for
-    all uses of the work, to the fullest extent permitted by applicable law.
-
-    * When using or citing the work, you should not imply endorsement
-    by the author or the affirmer.
-
-http://creativecommons.org/publicdomain/zero/1.0/legalcode
+**Paul Wilkerson**  
+Email: [compass0923@icloud.com](mailto:compass0923@icloud.com)  
 Phone: (318) 763-8888
 
-© 2023 Compass Tech
+© 2023 Compass Group
