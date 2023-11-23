@@ -1,4 +1,6 @@
-# RITA - Restaurant Inventory Taking Application
+# FREE RITA - Restaurant Inventory Taking Application
+
+# You can buy me a coffee by sending me some change to my cash app $pwilkano
 
 RITA is a web-based application that simplifies and automates inventory management for restaurants. It leverages voice-to-text technology, the Google Voice to Text API, and the OpenAI API to streamline data entry and processing. The application is built using HTML, CSS, JavaScript (or TypeScript alternatively) and offers a user-friendly, accurate, modular, and scalable solution for restaurant inventory management.
 
